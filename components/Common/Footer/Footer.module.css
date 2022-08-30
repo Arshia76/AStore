@@ -1,0 +1,115 @@
+.Footer {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+    background-color: #262626;
+}
+
+.Footer .Container {
+    width: 75%;
+    margin: auto;
+}
+
+.Footer .Top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.Footer .TopContent {
+    width: 350px;
+}
+
+.Footer .TopContent h2, .Footer .Middle .Services h2 {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+}
+
+.Footer .TopContent p {
+    color: #4A4A4A;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.Footer .Top .Input {
+    display: flex;
+}
+
+
+.Footer .Middle {
+    padding: 45px 0;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+}
+
+.Footer .Services {
+    display: flex;
+    flex-direction: column;
+}
+
+.Footer .Services p {
+    margin: 15px 0;
+}
+
+.Footer .Icons {
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.Footer .Icon {
+    margin: 0 7px;
+    transition: all .5s ease;
+}
+
+.Footer .Icon:hover {
+    color: red !important;
+}
+
+.Footer .Services h4 {
+    font-size: 18px !important;
+    color: white !important;
+    margin-bottom: 10px !important;
+    font-weight: 500;
+}
+
+.Footer .Services p {
+    color: white;
+    font-size: 16px;
+}
+
+.Footer .Services ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.Footer .Services ul li {
+    padding: 5px;
+    color: #4A4A4A;
+    font-size: 14px;
+    transition: all .2s ease;
+}
+
+.Footer .Services ul li:hover {
+    color: white;
+}
+
+.Footer .Line {
+    width: 100%;
+    height: 1px;
+    background-color: #4A4A4A;
+}
+
+.Footer .Bottom h3 {
+    color: #4A4A4A;
+    font-size: 18px;
+    padding: 25px 0;
+}
+
+.Footer .Bottom strong {
+    color: white;
+}
