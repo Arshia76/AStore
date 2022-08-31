@@ -1,0 +1,21 @@
+.Service {
+    display: flex;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.Service .Content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.Service .Content h5 {
+    font-size: 18px;
+    color: #262626;
+}
+
+.Service .Content span {
+    font-size: 15px;
+    color: #9C9086;
+}

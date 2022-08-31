@@ -16,13 +16,14 @@
     position: relative;
     padding: 10px 65px;
     border: 1px solid #BD744C;
-    background-color: transparent;
-    color: #BD744C;
+    background-color: #BD744C;
+    color: white;
     transition: all .3s ease-in;
     z-index: 0;
     font-size: 20px;
     margin-top: 30px;
     cursor: pointer;
+    font-weight: 500;
 }
 
 .Button.Slider::after {
@@ -35,12 +36,12 @@
     height: 100%;
     transform: scaleX(0) !important;
     transform-origin: left;
-    background-color: #BD744C;
+    background-color: #fff;
     z-index: -1;
 }
 
 .Button.Slider:hover {
-    color: white;
+    color: #BD744C;
 }
 
 .Button.Slider:hover::after {
