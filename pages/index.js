@@ -8,7 +8,7 @@ import styles from '../styles/page/Home.module.css';
 export default function Home(props) {
   const { products } = props.products;
   return (
-    <div>
+    <div style={{ overflow: ' hidden' }}>
       <Hero />
       <NewArrivals products={products} />
       <div className={styles.Services}>

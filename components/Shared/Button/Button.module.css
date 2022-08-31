@@ -1,50 +1,48 @@
 .Button {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .Button.Subscribe {
-    padding: 10px 40px;
-    background-color: #A6623D;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    font-weight: 500;
+  padding: 10px 40px;
+  background-color: #a6623d;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
-.Button.Slider {
-    position: relative;
-    padding: 10px 65px;
-    border: 1px solid #BD744C;
-    background-color: #BD744C;
-    color: white;
-    transition: all .3s ease-in;
-    z-index: 0;
-    font-size: 20px;
-    margin-top: 30px;
-    cursor: pointer;
-    font-weight: 500;
+.Button.View {
+  position: relative;
+  padding: 10px 65px;
+  background-color: #bd744c;
+  border: 1px solid #bd744c;
+  color: white;
+  z-index: 0;
+  font-size: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
-.Button.Slider::after {
-    transition: all .3s ease-in;
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scaleX(0) !important;
-    transform-origin: left;
-    background-color: #fff;
-    z-index: -1;
+.Button.View::after {
+  transition: all 0.3s ease-in;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0) !important;
+  transform-origin: left;
+  background-color: #fff;
+  z-index: -1;
 }
 
-.Button.Slider:hover {
-    color: #BD744C;
+.Button.View:hover {
+  color: #bd744c;
 }
 
-.Button.Slider:hover::after {
-    transform: scaleX(1) !important;
-    
+.Button.View:hover::after {
+  transform: scaleX(1) !important;
 }

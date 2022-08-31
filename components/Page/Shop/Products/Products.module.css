@@ -1,0 +1,16 @@
+.Products {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.Products .Header {
+  margin-bottom: 35px;
+}
+
+.ProductContiner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  row-gap: 35px;
+  column-gap: 35px;
+}

@@ -4,7 +4,7 @@ import styles from './Hero.module.css';
 import Image from 'next/image';
 import Resource from '../../../../public/Resource';
 
-const Hero = (props) => {
+const Hero = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -20,22 +20,22 @@ const Hero = (props) => {
         <div className={styles.Image}>
           <Image
             layout='fill'
-            objectFit='cover'
-            src={Resource.Images.CAMERA}
-            alt={'camera'}
+            objectFit='fill'
+            src={Resource.Images.BAG}
+            alt={'BAG'}
           />
         </div>
         <div className={styles.Content}>
-          <h2>CAMERA</h2>
-          <p>Get the exclusive list of cameras</p>
-          <Button title='View' className='Slider' />
+          <h2>BAG</h2>
+          <p>Get the exclusive list of BAGS</p>
+          <Button title='View' className='View' />
         </div>
       </div>
       <div className={styles.Product}>
         <div className={styles.Image}>
           <Image
             layout='fill'
-            objectFit='cover'
+            objectFit='fill'
             src={Resource.Images.PHONE}
             alt={'phone'}
           />
@@ -43,14 +43,14 @@ const Hero = (props) => {
         <div className={styles.Content}>
           <h2>Phone</h2>
           <p>Get the best phones around the world with best quality</p>
-          <Button title='View' className='Slider' />
+          <Button title='View' className='View' />
         </div>
       </div>
       <div className={styles.Product}>
         <div className={styles.Image}>
           <Image
             layout='fill'
-            objectFit='cover'
+            objectFit='fill'
             src={Resource.Images.LAPTOP}
             alt={'Laptop'}
           />
@@ -60,7 +60,7 @@ const Hero = (props) => {
           <p>
             Looking for laptop? Dont worry we ve got the best offers for you
           </p>
-          <Button title='View' className='Slider' />
+          <Button title='View' className='View' />
         </div>
       </div>
     </Slider>

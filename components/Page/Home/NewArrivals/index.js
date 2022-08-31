@@ -1,4 +1,5 @@
 import Product from '../../../Common/Product';
+import Button from '../../../Shared/Button';
 import styles from './NewArrivals.module.css';
 
 const NewArrivals = (props) => {
@@ -23,6 +24,7 @@ const NewArrivals = (props) => {
           );
         })}
       </div>
+      <Button className='View' title='View More' />
     </div>
   );
 };

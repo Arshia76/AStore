@@ -12,8 +12,10 @@
     "axios": "^0.27.2",
     "next": "12.2.5",
     "react": "18.2.0",
+    "react-custom-checkbox": "^2.0.2",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
+    "react-query": "^3.39.2",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
   },

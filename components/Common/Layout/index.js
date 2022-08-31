@@ -1,9 +1,9 @@
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import styles from './Layout.module.css';
+
 const Layout = (props) => {
   return (
-    <div className={styles.Layout}>
+    <div>
       <Navbar />
       {props.children}
       <Footer />
