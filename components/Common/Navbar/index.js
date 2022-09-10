@@ -2,9 +2,13 @@ import styles from './Navbar.module.css';
 import Link from 'next/link';
 import { BsCart } from 'react-icons/bs';
 import { AiOutlineUser } from 'react-icons/ai';
+import { useRouter } from 'next/router';
 import Resource from '../../../public/Resource';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
+  const router = useRouter();
+  const cartItems = useSelector((state) => state.cart.cartItems);
   return (
     <nav className={styles.Navbar}>
       <h1>
@@ -30,8 +34,13 @@ const Navbar = () => {
       <div className={styles.Icons}>
         <AiOutlineUser size={20} color='grey' cursor={'pointer'} />
         <div className={styles.CartContainer}>
-          <span className={styles.CartNumber}>35</span>
-          <BsCart size={20} color='grey' cursor={'pointer'} />
+          <span className={styles.CartNumber}>{cartItems.length}</span>
+          <BsCart
+            size={20}
+            color='grey'
+            cursor={'pointer'}
+            onClick={() => router.push(Resource.Routes.CART)}
+          />
         </div>
       </div>
     </nav>

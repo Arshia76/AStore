@@ -13,7 +13,8 @@
 }
 
 .Button.View,
-Button.View-White {
+.Button.Checkout,
+.Button.View-White {
   position: relative;
   padding: 10px 65px;
   background-color: #bd744c;
@@ -33,6 +34,7 @@ Button.View-White {
 }
 
 .Button.View::after,
+.Button.Checkout::after,
 .Button.View-White::after {
   transition: all 0.3s ease-in;
   position: absolute;
@@ -51,7 +53,8 @@ Button.View-White {
   background-color: #bd744c;
 }
 
-.Button.View:hover {
+.Button.View:hover,
+.Button.Checkout:hover {
   color: #bd744c;
 }
 
@@ -59,6 +62,7 @@ Button.View-White {
   color: #fff;
 }
 .Button.View:hover::after,
+.Button.Checkout:hover::after,
 .Button.View-White:hover::after {
   transform: scaleX(1) !important;
 }

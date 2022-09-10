@@ -1,0 +1,36 @@
+.CartItems {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 15px 0 0 15px;
+  flex: 2;
+  box-shadow: 0 0 20px -17px rgba(0, 0, 0, 0.393);
+}
+
+.CartItems .CartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #fafafa;
+  padding-bottom: 50px;
+}
+
+.CartHeader h4 {
+  font-size: 28px;
+}
+
+.CartHeader span {
+  font-size: 18px;
+  color: #c9cccb;
+}
+
+.CartItemList {
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+.CartItems h5 {
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}

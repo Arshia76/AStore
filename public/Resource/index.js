@@ -32,6 +32,7 @@ class Resource {
   static Routes = {
     HOME: '/',
     PRODUCTS: '/products',
+    CART: '/cart',
   };
 }
 
