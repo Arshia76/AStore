@@ -2,6 +2,7 @@ import styles from './Navbar.module.css';
 import Link from 'next/link';
 import { BsCart } from 'react-icons/bs';
 import { AiOutlineUser } from 'react-icons/ai';
+import Resource from '../../../public/Resource';
 
 const Navbar = () => {
   return (
@@ -11,10 +12,10 @@ const Navbar = () => {
       </h1>
       <ul>
         <li>
-          <Link href={'/'}>Home</Link>
+          <Link href={Resource.Routes.HOME}>Home</Link>
         </li>
         <li>
-          <Link href={'/'}>Shop</Link>
+          <Link href={Resource.Routes.PRODUCTS}>Shop</Link>
         </li>
         <li>
           <Link href={'/'}>Blog</Link>
@@ -28,7 +29,8 @@ const Navbar = () => {
       </ul>
       <div className={styles.Icons}>
         <AiOutlineUser size={20} color='grey' cursor={'pointer'} />
-        <div>
+        <div className={styles.CartContainer}>
+          <span className={styles.CartNumber}>35</span>
           <BsCart size={20} color='grey' cursor={'pointer'} />
         </div>
       </div>

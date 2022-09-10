@@ -5,7 +5,7 @@ import { getAllProducts, getCategories } from '../../lib/api/Product';
 import styles from '../../styles/page/Shop.module.css';
 
 const ProductsPage = (props) => {
-  const { products } = props.products;
+  const { products } = props;
 
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [categoryFilter, setCategoryFilter] = useState([]);
@@ -41,7 +41,7 @@ export default ProductsPage;
 export async function getStaticProps() {
   try {
     const data = await getCategories();
-    const products = await getAllProducts(100);
+    const products = await getAllProducts();
     return {
       props: {
         categories: data,

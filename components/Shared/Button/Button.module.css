@@ -12,7 +12,8 @@
   font-weight: 500;
 }
 
-.Button.View {
+.Button.View,
+Button.View-White {
   position: relative;
   padding: 10px 65px;
   background-color: #bd744c;
@@ -25,7 +26,14 @@
   font-weight: 500;
 }
 
-.Button.View::after {
+.Button.View-White {
+  background-color: white;
+  color: #bd744c;
+  margin-right: 10px;
+}
+
+.Button.View::after,
+.Button.View-White::after {
   transition: all 0.3s ease-in;
   position: absolute;
   content: '';
@@ -39,10 +47,18 @@
   z-index: -1;
 }
 
+.Button.View-White::after {
+  background-color: #bd744c;
+}
+
 .Button.View:hover {
   color: #bd744c;
 }
 
-.Button.View:hover::after {
+.Button.View-White:hover {
+  color: #fff;
+}
+.Button.View:hover::after,
+.Button.View-White:hover::after {
   transform: scaleX(1) !important;
 }

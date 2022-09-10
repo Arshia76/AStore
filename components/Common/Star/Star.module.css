@@ -1,0 +1,10 @@
+.Star {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.Star span:first-child {
+  font-size: 28px;
+  margin-right: 2px;
+}

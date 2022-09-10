@@ -7,15 +7,19 @@ import 'slick-carousel/slick/slick-theme.css';
 import Layout from '../components/Common/Layout';
 import { QueryClientProvider, QueryClient } from 'react-query';
 import { useState } from 'react';
+import { store } from '../store';
+import { Provider } from 'react-redux';
 
 function MyApp({ Component, pageProps }) {
   const [queryClient] = useState(() => new QueryClient());
   return (
-    <QueryClientProvider client={queryClient}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </QueryClientProvider>
+    <Provider store={store}>
+      <QueryClientProvider client={queryClient}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </QueryClientProvider>
+    </Provider>
   );
 }
 

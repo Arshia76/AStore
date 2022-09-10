@@ -1,0 +1,68 @@
+.ProductPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ProductPage .Product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  width: 90%;
+  margin: auto;
+  padding: 30px;
+  min-height: calc(100vh - 54px);
+  align-items: center;
+}
+
+.ProductPage .Image {
+  width: 80%;
+  height: 400px;
+  position: relative;
+}
+
+.ProductPage .Content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ProductPage .Content h5 {
+  font-size: 35px;
+  color: #cecece;
+  margin-bottom: 30px;
+}
+
+.ProductPage .Price {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: black !important;
+}
+
+.ProductPage .Content h3 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #58666d;
+}
+
+.ProductPage .Content p {
+  font-size: 22px;
+  color: #76757a;
+  margin-bottom: 20px;
+  line-height: 32px;
+}
+
+.ProductPage .Content .Actions,
+.ProductPage .Content .Buttons {
+  display: flex;
+  align-items: center;
+}
+
+.ProductPage h6 {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #76757a;
+  padding: 10px;
+}

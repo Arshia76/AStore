@@ -1,22 +1,29 @@
 .Filter {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  position: sticky;
-  top: 0;
-  height: 90vh;
-  overflow-y: scroll;
   padding: 30px;
+  width: 100%;
 }
 
 .Filter .Categories {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
+  width: 100%;
+  justify-content: center;
+}
+
+.Filter .Category {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 20px;
+  border-radius: 15px;
 }
 
 .Filter h4 {
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-top: 10px;
 }

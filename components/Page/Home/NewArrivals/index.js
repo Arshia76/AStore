@@ -1,8 +1,12 @@
 import Product from '../../../Common/Product';
 import Button from '../../../Shared/Button';
 import styles from './NewArrivals.module.css';
+import { useRouter } from 'next/router';
+import Resource from '../../../../public/Resource';
 
 const NewArrivals = (props) => {
+  const router = useRouter();
+  const handleClick = (id) => router.push(`${Resource.Routes.PRODUCTS}/${id}`);
   return (
     <div className={styles.NewArrivals}>
       <h4>New Arrivals</h4>
@@ -15,9 +19,11 @@ const NewArrivals = (props) => {
         {props.products.slice(0, 8).map((p) => {
           return (
             <Product
+              onClick={handleClick}
               key={p.id}
+              productId={p.id}
               productName={p.title}
-              productImage={p.thumbnail}
+              productImage={p.image}
               productCategory={p.category}
               productPrice={p.price}
             />

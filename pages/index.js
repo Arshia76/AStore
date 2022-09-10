@@ -6,7 +6,7 @@ import Resource from '../public/Resource';
 import styles from '../styles/page/Home.module.css';
 
 export default function Home(props) {
-  const { products } = props.products;
+  const { products } = props;
   return (
     <div style={{ overflow: ' hidden' }}>
       <Hero />
@@ -35,6 +35,7 @@ export default function Home(props) {
 export async function getStaticProps() {
   try {
     const data = await getAllProducts();
+    console.log(data);
     return {
       props: {
         products: data,

@@ -1,46 +1,67 @@
 .Navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 7px 20px;
-    background-color: white;
-    position: sticky;
-    top: 0;
-    box-shadow: 2px 2px 2px -1px rgba(0, 0, 0, 0.142);
-    z-index: 9999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 7px 20px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  box-shadow: 2px 2px 2px -1px rgba(0, 0, 0, 0.142);
+  z-index: 9999;
 }
 
 .Navbar h1 {
-    font-size: 30px;
-    color: black;
+  font-size: 30px;
+  color: black;
 }
 
 .Navbar strong {
-    font-size: 35px;
-    color: red;
+  font-size: 35px;
+  color: red;
 }
 
 .Navbar ul {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .Navbar ul li {
-    padding: 5px 20px;
-    font-size: 16px;
-    color: grey;
-    transition: all .3s ease;
+  padding: 5px 20px;
+  font-size: 16px;
+  color: grey;
+  transition: all 0.3s ease;
 }
 
 .Navbar ul li:hover {
-    color: #BD744C;
+  color: #bd744c;
 }
 
 .Navbar .Icons {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .Navbar .Icons div {
-    margin-left: 20px;
+  margin-left: 20px;
+}
+
+.Navbar .CartContainer {
+  position: relative;
+}
+
+.Navbar .CartNumber {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(15px, -10px);
+  padding: 4px;
+  border-radius: 50%;
+  background-color: #bd744c;
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
 }
