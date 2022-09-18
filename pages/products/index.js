@@ -3,6 +3,7 @@ import Filter from '../../components/Page/Shop/Filter';
 import Products from '../../components/Page/Shop/Products';
 import { getAllProducts, getCategories } from '../../lib/api/Product';
 import styles from '../../styles/page/Shop.module.css';
+import Layout from '../../components/Common/Layout';
 
 const ProductsPage = (props) => {
   const { products } = props;
@@ -22,17 +23,19 @@ const ProductsPage = (props) => {
   console.log(categoryFilter);
 
   return (
-    <div className={styles.Shop}>
-      <Filter
-        categories={props.categories}
-        setCategoryFilter={setCategoryFilter}
-      />
-      <Products
-        products={products}
-        filteredProducts={filteredProducts}
-        categoryFilter={categoryFilter}
-      />
-    </div>
+    <Layout>
+      <div className={styles.Shop}>
+        <Filter
+          categories={props.categories}
+          setCategoryFilter={setCategoryFilter}
+        />
+        <Products
+          products={products}
+          filteredProducts={filteredProducts}
+          categoryFilter={categoryFilter}
+        />
+      </div>
+    </Layout>
   );
 };
 

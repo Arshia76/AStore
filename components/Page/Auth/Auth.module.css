@@ -1,0 +1,35 @@
+.AuthContainer {
+  height: calc(100vh - 54px);
+  display: grid;
+  place-items: center;
+}
+
+.Auth {
+  border-radius: 25px;
+  box-shadow: 0 0 30px -25px rgba(0, 0, 0, 0.484);
+  padding: 50px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+}
+
+.Auth h5 {
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+
+.Auth span {
+  color: #ddd;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.Auth strong {
+  font-size: 18px;
+  margin-left: 5px;
+  font-weight: 600;
+  color: #f43219;
+  cursor: pointer;
+}

@@ -20,14 +20,29 @@ const Hero = () => {
         <div className={styles.Image}>
           <Image
             layout='fill'
-            objectFit='fill'
-            src={Resource.Images.BAG}
-            alt={'BAG'}
+            objectFit='cover'
+            src={Resource.Images.WOMEN}
+            alt={'WOMEN-CLOTHES'}
           />
         </div>
         <div className={styles.Content}>
-          <h2>BAG</h2>
-          <p>Get the exclusive list of BAGS</p>
+          <h2>WOMEN CLOTHES</h2>
+          <p>Get the exclusive list of WOMEN Clothes</p>
+          <Button title='View' className='View' />
+        </div>
+      </div>
+      <div className={styles.Product}>
+        <div className={styles.Image}>
+          <Image
+            layout='fill'
+            objectFit='cover'
+            src={Resource.Images.MEN}
+            alt={'MEN_CLOTHES'}
+          />
+        </div>
+        <div className={styles.Content}>
+          <h2>MEN CLOTHES</h2>
+          <p>Get the best T-Shirts around the world with best quality</p>
           <Button title='View' className='View' />
         </div>
       </div>
@@ -36,29 +51,14 @@ const Hero = () => {
           <Image
             layout='fill'
             objectFit='fill'
-            src={Resource.Images.PHONE}
-            alt={'phone'}
+            src={Resource.Images.JEWELERY1}
+            alt={'JEWELERY'}
           />
         </div>
         <div className={styles.Content}>
-          <h2>Phone</h2>
-          <p>Get the best phones around the world with best quality</p>
-          <Button title='View' className='View' />
-        </div>
-      </div>
-      <div className={styles.Product}>
-        <div className={styles.Image}>
-          <Image
-            layout='fill'
-            objectFit='fill'
-            src={Resource.Images.LAPTOP}
-            alt={'Laptop'}
-          />
-        </div>
-        <div className={styles.Content}>
-          <h2>Laptop</h2>
+          <h2>JEWELERY</h2>
           <p>
-            Looking for laptop? Dont worry we ve got the best offers for you
+            Looking for Jewelery? Dont worry we ve got the best offers for you
           </p>
           <Button title='View' className='View' />
         </div>

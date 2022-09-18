@@ -25,6 +25,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 200px;
+  text-align: center !important;
 }
 
 .CartItem .Count {

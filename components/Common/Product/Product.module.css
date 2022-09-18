@@ -8,6 +8,12 @@
   object-fit: cover;
   border: 1px solid #f1f1f1;
   border-radius: 6px;
+  transition: all 0.5s ease;
+}
+
+.Product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px -7px rgba(213, 210, 210, 0.781);
 }
 
 .Product .Image {

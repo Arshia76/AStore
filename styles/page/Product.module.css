@@ -13,6 +13,9 @@
   padding: 30px;
   min-height: calc(100vh - 54px);
   align-items: center;
+  border: 1px solid #ddd;
+  margin: 20px 0;
+  border-radius: 15px;
 }
 
 .ProductPage .Image {
@@ -28,15 +31,31 @@
 }
 
 .ProductPage .Content h5 {
-  font-size: 35px;
+  font-size: 25px;
   color: #cecece;
   margin-bottom: 30px;
+  background-color: #f0f2f4;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  color: #978786 !important;
+  width: 100%;
+  padding: 7px 15px;
 }
 
-.ProductPage .Price {
-  font-size: 40px;
-  margin-bottom: 20px;
-  color: black !important;
+.ProductPage .Content .Price {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: white !important;
+  clip-path: polygon(25% 0, 100% 0%, 100% 100%, 24% 100%, 0 53%);
+  background-color: #008a91 !important;
+  width: 150px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 5px;
+  border: none !important;
+  padding-left: 15px !important;
 }
 
 .ProductPage .Content h3 {

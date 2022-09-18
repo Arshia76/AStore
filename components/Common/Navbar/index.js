@@ -5,13 +5,18 @@ import { AiOutlineUser } from 'react-icons/ai';
 import { useRouter } from 'next/router';
 import Resource from '../../../public/Resource';
 import { useSelector } from 'react-redux';
+import { useSession } from 'next-auth/react';
+import Button from '../../Shared/Button';
+import { IoIosLogIn } from 'react-icons/io';
+import { signOut } from 'next-auth/react';
 
 const Navbar = () => {
   const router = useRouter();
   const cartItems = useSelector((state) => state.cart.cartItems);
+  const { status } = useSession();
   return (
     <nav className={styles.Navbar}>
-      <h1>
+      <h1 style={{ cursor: 'pointer' }}>
         <strong>A</strong>store
       </h1>
       <ul>
@@ -32,7 +37,30 @@ const Navbar = () => {
         </li>
       </ul>
       <div className={styles.Icons}>
-        <AiOutlineUser size={20} color='grey' cursor={'pointer'} />
+        {status === 'authenticated' ? (
+          <AiOutlineUser
+            size={20}
+            color='grey'
+            cursor={'pointer'}
+            onClick={() =>
+              signOut({
+                redirect: false,
+              })
+            }
+          />
+        ) : (
+          <Button
+            className={'SignUp'}
+            title='Login | Register'
+            img={
+              <IoIosLogIn
+                size={20}
+                style={{ marginRight: '5px', fontWeight: 'normal' }}
+              />
+            }
+            onClick={() => router.push(Resource.Routes.AUTH)}
+          />
+        )}
         <div className={styles.CartContainer}>
           <span className={styles.CartNumber}>{cartItems.length}</span>
           <BsCart

@@ -1,6 +1,13 @@
 .Button {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.Button span {
+  display: grid;
+  place-items: center;
+  margin: 0 !important;
 }
 
 .Button.Subscribe {
@@ -65,4 +72,49 @@
 .Button.Checkout:hover::after,
 .Button.View-White:hover::after {
   transform: scaleX(1) !important;
+}
+
+.Button.Auth {
+  background: linear-gradient(to right, #ec705f, #edb1a4);
+  color: white;
+  font-size: 19px;
+  padding: 6px 10px;
+  border-radius: 25px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  width: 150px;
+}
+
+.Button.Auth:hover {
+  opacity: 0.8;
+}
+
+.Button.SignUp {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 500;
+  display: flex;
+  align-items: center;
+}
+
+.Button.Loader span {
+  animation: rotate 0.7s ease-in;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

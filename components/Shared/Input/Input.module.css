@@ -9,6 +9,11 @@
   width: 300px;
 }
 
+.Container.Auth {
+  width: 100%;
+  align-self: stretch !important;
+}
+
 .Input.NewsTeller {
   background-color: white;
   color: black;
@@ -34,4 +39,20 @@
 
 .Input.CartCode::placeholder {
   color: #f1f1f1;
+}
+
+.Input.Auth {
+  font-size: 18px;
+  border-radius: 25px;
+  width: 100%;
+  padding: 8px 15px;
+  background-color: #fafafa;
+  color: #9d8ba4;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.Input.Auth::placeholder {
+  text-align: center;
+  color: #9d8ba4;
 }

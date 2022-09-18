@@ -6,6 +6,9 @@ import ELECTRONICS from './Images/electronics.png';
 import MEN_CLOTHING from './Images/men-clothing.png';
 import WOMEN_CLOTHING from './Images/women-clothing.png';
 import JEWELERY from './Images/jewelery.png';
+import WOMEN from './Images/women.jpg';
+import MEN from './Images/men.jpg';
+import JEWELERY1 from './Images/jewelery.jpg';
 
 import SHIPPING from './Svg/shipping.svg';
 import MONEY_BACK from './Svg/money_back.svg';
@@ -21,6 +24,9 @@ class Resource {
     WOMEN_CLOTHING,
     JEWELERY,
     ELECTRONICS,
+    WOMEN,
+    MEN,
+    JEWELERY1,
   };
 
   static Svg = {
@@ -33,6 +39,7 @@ class Resource {
     HOME: '/',
     PRODUCTS: '/products',
     CART: '/cart',
+    AUTH: '/auth',
   };
 }
 
