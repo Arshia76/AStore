@@ -62,7 +62,7 @@ const Navbar = () => {
           />
         )}
         <div className={styles.CartContainer}>
-          <span className={styles.CartNumber}>{cartItems.length}</span>
+          <span className={styles.CartNumber}>{cartItems?.length || 0}</span>
           <BsCart
             size={20}
             color='grey'

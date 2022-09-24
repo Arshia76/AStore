@@ -1,0 +1,84 @@
+.OrderItems {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 15px 0 0 15px;
+  flex: 2;
+  box-shadow: 0 0 20px -17px rgba(0, 0, 0, 0.393);
+}
+
+.OrderItems .OrderHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #fafafa;
+  padding-bottom: 50px;
+}
+
+.OrderHeader h4 {
+  font-size: 28px;
+}
+
+.OrderHeader span {
+  font-size: 18px;
+  color: #c9cccb;
+}
+
+.OrderItemList {
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+.OrderItems h5 {
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.OrderItems .TotalAmount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 18px;
+  /* box-shadow: 0 0 25px -20px rgba(0, 0, 0, 0.34); */
+  width: fit-content;
+  align-self: flex-end !important;
+  padding: 15px;
+  border-radius: 10px;
+  /* border: 1px solid #ddd; */
+}
+
+.TotalFirst {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+}
+
+.TotalFirst div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.TotalSecond {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+}
+
+.Title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #5e626c;
+}
+
+.Amount {
+  font-size: 18px;
+  font-weight: 600;
+  color: #a3a7ad;
+}

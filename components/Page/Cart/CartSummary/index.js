@@ -2,19 +2,30 @@ import Input from '../../../Shared/Input';
 import Button from '../../../Shared/Button';
 import styles from './CartSummary.module.css';
 import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
+import Resource from '../../../../public/Resource';
 
 const CartSummary = () => {
+  const router = useRouter();
   const cartItems = useSelector((state) => state.cart.cartItems);
   const itemsPrice =
-    cartItems.length &&
+    cartItems?.length &&
+    cartItems?.reduce((total, item) => {
+      console.log(item.price);
+      console.log(item.count);
+      return total + item.price * (item.count || 1);
+    }, 0);
+
+  const itemCount =
+    cartItems?.length &&
     cartItems.reduce((total, item) => {
-      return total + item.productPrice;
+      return total + (item.count || 1);
     }, 0);
 
   const payable =
-    cartItems.length &&
+    cartItems?.length &&
     cartItems.reduce((total, item) => {
-      return total + item.productPrice;
+      return total + item.price * (item.count || 1);
     }, 0);
 
   return (
@@ -23,8 +34,8 @@ const CartSummary = () => {
       <div className={styles.SummaryOptions}>
         <div className={styles.Items}>
           <span style={{ marginRight: '20px' }}>Items</span>
-          <span>{cartItems.length}</span>
-          <span>${itemsPrice}</span>
+          <span>{itemCount}</span>
+          <span>${itemsPrice?.toFixed(2)}</span>
         </div>
         <div className={styles.Shipping}>
           <span>Shipping</span>
@@ -37,9 +48,13 @@ const CartSummary = () => {
       </div>
       <div className={styles.Subtotal}>
         <span>Total Price</span>
-        <span>${payable}</span>
+        <span>${payable?.toFixed(2)}</span>
       </div>
-      <Button className='Checkout' title='Checkout' />
+      <Button
+        className='Checkout'
+        title='Checkout'
+        onClick={() => router.push(Resource.Routes.CHECKOUT)}
+      />
     </div>
   );
 };

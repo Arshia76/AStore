@@ -5,9 +5,13 @@ import Image from 'next/image';
 import Star from '../../components/Common/Star';
 import Button from '../../components/Shared/Button';
 import Layout from '../../components/Common/Layout';
+import { useSelector, useDispatch } from 'react-redux';
+import { addToCart } from '../../store/features/cartSlice';
 
 const ProductPage = (props) => {
   const { product, products } = props;
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  const dispatch = useDispatch();
 
   return (
     <Layout>
@@ -28,7 +32,18 @@ const ProductPage = (props) => {
             <div className={styles.Buttons}>
               <Button title={'Buy Now'} className='View-White' />
 
-              <Button title='Add To Cart' className='View' />
+              {cartItems.length &&
+              cartItems.find(
+                (item) => item.id.toString() === product.id.toString()
+              ) ? (
+                <h4>Added To Cart</h4>
+              ) : (
+                <Button
+                  title='Add To Cart'
+                  className='View'
+                  onClick={() => dispatch(addToCart(product))}
+                />
+              )}
             </div>
           </div>
         </div>

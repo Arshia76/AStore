@@ -14,6 +14,18 @@
   align-self: stretch !important;
 }
 
+.Container.Shipping {
+  width: 100%;
+}
+
+.Container.CreditCard {
+  width: 100%;
+}
+
+.MainContainer.CreditCard {
+  width: 100%;
+}
+
 .Input.NewsTeller {
   background-color: white;
   color: black;
@@ -55,4 +67,45 @@
 .Input.Auth::placeholder {
   text-align: center;
   color: #9d8ba4;
+}
+
+.Input.Shipping {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  background-color: #f7f7f9;
+  color: #6f6f6f;
+  font-size: 19px;
+  margin: 2px 0;
+  width: 100%;
+}
+
+.Input.Shipping:focus {
+  border: 3px solid #ebebed;
+}
+
+.Input.CreditCard {
+  padding: 7px 10px;
+  color: #838890;
+  width: 100%;
+  font-size: 20px;
+}
+
+.Input.CreditCard::placeholder {
+  color: #fff;
+}
+
+.Label.Shipping {
+  color: #6f6f6f;
+  font-size: 18px;
+}
+
+.Error.Shipping {
+  color: red;
+  font-size: 18px;
+}
+
+.MainContainer.Shipping {
+  margin-bottom: 18px;
+  width: 100%;
 }

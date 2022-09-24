@@ -1,0 +1,26 @@
+.Shipping {
+  min-height: calc(100vh - 54px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  flex-direction: column;
+  margin: auto;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.Shipping h4 {
+  font-size: 35px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.Shipping form {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}

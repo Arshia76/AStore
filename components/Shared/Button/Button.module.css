@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .Button span {
@@ -105,9 +106,29 @@
   align-items: center;
 }
 
+.Button.Shipping {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #6f6f6f;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
 .Button.Loader span {
   animation: rotate 0.7s ease-in;
   animation-iteration-count: infinite;
+}
+
+.Button.Pay {
+  width: 100%;
+  color: white;
+  border-radius: 25px;
+  background-color: #3e88eb;
+  font-size: 25px;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: bold;
 }
 
 @keyframes rotate {

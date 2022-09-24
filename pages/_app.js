@@ -31,7 +31,6 @@ function MyApp({ Component, pageProps }) {
             pauseOnHover
             style={{ fontSize: '14px' }}
           />
-          =
         </QueryClientProvider>
       </SessionProvider>
     </Provider>

@@ -1,6 +1,5 @@
 import CartItems from '../components/Page/Cart/CartItems';
 import CartSummary from '../components/Page/Cart/CartSummary';
-import PrivateRoute from '../components/Common/PrivateRoute';
 import styles from '../styles/page/Cart.module.css';
 import Layout from '../components/Common/Layout';
 
@@ -15,4 +14,4 @@ const CartPage = () => {
   );
 };
 
-export default PrivateRoute(CartPage);
+export default CartPage;

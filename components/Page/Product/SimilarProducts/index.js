@@ -15,11 +15,11 @@ const SimilarProducts = (props) => {
           <Product
             onClick={handleDetail}
             key={p.id}
-            productId={p.id}
-            productName={p.title}
-            productImage={p.image}
-            productCategory={p.category}
-            productPrice={p.price}
+            id={p.id}
+            title={p.title}
+            image={p.image}
+            category={p.category}
+            price={p.price}
           />
         );
       })}

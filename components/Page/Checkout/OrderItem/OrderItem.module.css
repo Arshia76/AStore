@@ -1,0 +1,54 @@
+.OrderItem {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5px;
+  border-bottom: 2px solid #fafafa;
+}
+
+.OrderItem .ProductName {
+  display: flex;
+  flex-direction: column;
+}
+
+.OrderItem .ProductName h5 {
+  font-size: 15px;
+  color: #ddd;
+  margin-bottom: 5px;
+}
+
+.OrderItem span {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.783);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 200px;
+  text-align: center !important;
+}
+
+.OrderItem .Count {
+  display: flex;
+  align-items: center;
+}
+
+.OrderItem .Count span {
+  padding: 5px;
+  border: 1px solid #ddd;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.OrderItem .Count span:nth-child(2) {
+  border-right: none;
+  border-left: none;
+}
+
+.OrderItem .Count :first-child,
+.OrderItem .Count :last-child {
+  cursor: pointer;
+}

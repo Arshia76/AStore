@@ -12,6 +12,7 @@ const Button = (props) => {
       onClick={props.onClick}
       disabled={props.disabled}
       style={props.style}
+      type={props.type}
     >
       {props.img && <span>{props.img}</span>}
       {props.title}
@@ -29,6 +30,7 @@ Button.defaultProps = {
   title: null,
   disabled: false,
   isLoader: false,
+  type: 'submit',
 };
 
 Button.propTypes = {
@@ -41,6 +43,7 @@ Button.propTypes = {
   title: PropTypes.string,
   disabled: PropTypes.bool,
   isLoader: PropTypes.bool,
+  type: PropTypes.string,
 };
 
 export default Button;

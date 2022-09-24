@@ -40,6 +40,7 @@ class Resource {
     PRODUCTS: '/products',
     CART: '/cart',
     AUTH: '/auth',
+    CHECKOUT: '/checkout',
   };
 }
 

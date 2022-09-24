@@ -78,6 +78,12 @@
   align-items: center;
 }
 
+.ProductPage .Content h4 {
+  font-size: 20px;
+  padding: 15px;
+  margin-top: 25px;
+}
+
 .ProductPage h6 {
   font-size: 35px;
   font-weight: bold;

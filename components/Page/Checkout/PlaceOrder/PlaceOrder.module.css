@@ -1,0 +1,6 @@
+.PlaceOrder {
+  display: flex;
+  height: calc(100vh - 54px);
+  max-height: calc(100vh - 54px);
+  padding: 50px;
+}

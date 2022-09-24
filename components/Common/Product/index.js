@@ -9,21 +9,17 @@ const Product = (props) => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   return (
     <div className={styles.Product}>
-      <div
-        className={styles.Image}
-        onClick={() => props.onClick(props.productId)}
-      >
-        <Image src={props.productImage} alt={props.productName} layout='fill' />
+      <div className={styles.Image} onClick={() => props.onClick(props.id)}>
+        <Image src={props.image} alt={props.title} layout='fill' />
       </div>
       <div className={styles.Content}>
-        <h4>{props.productCategory}</h4>
-        <h2>{props.productName}</h2>
+        <h4>{props.category}</h4>
+        <h2>{props.title}</h2>
         <div className={styles.Actions}>
-          <span>${props.productPrice}</span>
+          <span>${props.price}</span>
         </div>
-        {cartItems.find(
-          (item) => item.productId.toString() === props.productId.toString()
-        ) ? (
+        {cartItems?.length &&
+        cartItems.find((item) => item.id.toString() === props.id.toString()) ? (
           <h6>Added to cart!</h6>
         ) : (
           <Button

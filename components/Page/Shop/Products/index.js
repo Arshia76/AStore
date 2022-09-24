@@ -19,11 +19,11 @@ const Products = (props) => {
                 <Product
                   onClick={handleDetail}
                   key={p.id}
-                  productId={p.id}
-                  productName={p.title}
-                  productImage={p.image}
-                  productCategory={p.category}
-                  productPrice={p.price}
+                  id={p.id}
+                  name={p.title}
+                  image={p.image}
+                  category={p.category}
+                  price={p.price}
                 />
               );
             })
@@ -31,12 +31,12 @@ const Products = (props) => {
               return (
                 <Product
                   onClick={handleDetail}
-                  productId={p.id}
+                  id={p.id}
                   key={p.id}
-                  productName={p.title}
-                  productImage={p.image}
-                  productCategory={p.category}
-                  productPrice={p.price}
+                  title={p.title}
+                  image={p.image}
+                  category={p.category}
+                  price={p.price}
                 />
               );
             })}
