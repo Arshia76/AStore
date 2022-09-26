@@ -34,7 +34,7 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-  icon: PropTypes.string,
+  img: PropTypes.string,
   id: PropTypes.string,
   className: PropTypes.string,
   alt: PropTypes.string,

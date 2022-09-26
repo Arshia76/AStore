@@ -30,8 +30,6 @@ const ProductPage = (props) => {
             <p>{product.description}</p>
             <div className={styles.Actions}></div>
             <div className={styles.Buttons}>
-              <Button title={'Buy Now'} className='View-White' />
-
               {cartItems.length &&
               cartItems.find(
                 (item) => item.id.toString() === product.id.toString()

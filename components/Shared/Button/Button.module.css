@@ -113,6 +113,7 @@
   color: white;
   font-size: 20px;
   margin-bottom: 18px;
+  width: 150px;
 }
 
 .Button.Loader span {

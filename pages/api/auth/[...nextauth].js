@@ -8,6 +8,24 @@ const authOptions = {
   session: {
     strategy: 'jwt',
   },
+  callbacks: {
+    async jwt({ token, account, user }) {
+      // Persist the OAuth access_token to the token right after signin
+      if (account) {
+        token.id = user.id;
+        token.username = user.username;
+        console.log(token);
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      // Send properties to the client, like an access_token from a provider.
+      session.id = token.id;
+      session.username = token.username;
+      console.log(session);
+      return session;
+    },
+  },
   providers: [
     CredentialsProvider({
       type: 'credentials',
@@ -29,6 +47,8 @@ const authOptions = {
 
         await user.save();
 
+        console.log('log detail', user);
+
         return {
           id: user._id,
           username: user.username,
@@ -39,7 +59,7 @@ const authOptions = {
   pages: {
     signIn: '/auth',
   },
-  secret: process.env.JWT_SECRET,
+  secret: process.env.NEXTAUTH_SECRET,
 };
 
 export default NextAuth(authOptions);

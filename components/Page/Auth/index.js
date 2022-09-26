@@ -28,6 +28,8 @@ const Login = (props) => {
       ...data,
       redirect: false,
     });
+    console.log(res);
+
     if (res.ok) {
       router.replace(Resource.Routes.HOME);
       toast.success('Logged in successfuly');

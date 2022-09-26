@@ -13,8 +13,8 @@ const CheckoutPage = () => {
           <span></span>
           <span></span>
         </div>
-        <PlaceOrder />
-        {/* <Shipping /> */}
+        {/* <PlaceOrder /> */}
+        <Shipping />
       </div>
     </Layout>
   );

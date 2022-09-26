@@ -19,20 +19,6 @@ const UserModel = new mongoose.Schema(
         type: String,
       },
     },
-    address: {
-      country: {
-        type: String,
-      },
-      province: {
-        type: String,
-      },
-      city: {
-        type: String,
-      },
-      location: {
-        type: String,
-      },
-    },
   },
   {
     timestamps: true,
