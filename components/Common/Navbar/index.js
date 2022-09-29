@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState, useRef, useEffect } from 'react';
 import styles from './Navbar.module.css';
 import Link from 'next/link';
 import { BsCart } from 'react-icons/bs';
@@ -13,10 +13,27 @@ import { signOut } from 'next-auth/react';
 import { RefContext } from '../../../context/RefContext';
 
 const Navbar = () => {
+  const [showDropdown, setShowDropdown] = useState(false);
   const context = useContext(RefContext);
   const router = useRouter();
   const cartItems = useSelector((state) => state.cart.cartItems);
   const { status } = useSession();
+
+  const ref = useRef();
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside, true);
+    return () => {
+      document.removeEventListener('click', handleClickOutside, true);
+    };
+  }, []);
+
+  const handleClickOutside = (event) => {
+    if (ref.current && !ref.current.contains(event.target)) {
+      setShowDropdown(false);
+    }
+  };
+
   return (
     <nav className={styles.Navbar}>
       <h1 style={{ cursor: 'pointer' }}>
@@ -37,16 +54,32 @@ const Navbar = () => {
       </ul>
       <div className={styles.Icons}>
         {status === 'authenticated' ? (
-          <AiOutlineUser
-            size={20}
-            color='grey'
-            cursor={'pointer'}
-            onClick={() =>
-              signOut({
-                redirect: false,
-              })
-            }
-          />
+          <div className={styles.DropdownContainer}>
+            <AiOutlineUser
+              size={20}
+              color='grey'
+              cursor={'pointer'}
+              onClick={() => setShowDropdown(!showDropdown)}
+            />
+            <div
+              ref={ref}
+              className={styles.Dropdown}
+              style={{ display: `${showDropdown ? 'flex' : 'none'}` }}
+            >
+              <span onClick={() => router.push(Resource.Routes.ORDERS)}>
+                Orders
+              </span>
+              <span
+                onClick={() =>
+                  signOut({
+                    redirect: false,
+                  })
+                }
+              >
+                Signout
+              </span>
+            </div>
+          </div>
         ) : (
           <Button
             className={'SignUp'}
