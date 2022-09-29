@@ -27,7 +27,7 @@
 
 .Navbar ul li {
   padding: 5px 20px;
-  font-size: 16px;
+  font-size: 20px;
   color: grey;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -54,17 +54,17 @@
   position: absolute;
   right: 0;
   top: 0;
-  transform: translate(15px, -10px);
+  transform: translate(20px, -13px);
   padding: 4px;
   border-radius: 50%;
   background-color: #bd744c;
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
 }
 
 .DropdownContainer {

@@ -1,4 +1,4 @@
-import { useContext, useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import styles from './Navbar.module.css';
 import Link from 'next/link';
 import { BsCart } from 'react-icons/bs';
@@ -10,11 +10,9 @@ import { useSession } from 'next-auth/react';
 import Button from '../../Shared/Button';
 import { IoIosLogIn } from 'react-icons/io';
 import { signOut } from 'next-auth/react';
-import { RefContext } from '../../../context/RefContext';
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const context = useContext(RefContext);
   const router = useRouter();
   const cartItems = useSelector((state) => state.cart.cartItems);
   const { status } = useSession();
@@ -34,9 +32,16 @@ const Navbar = () => {
     }
   };
 
+  const itemCount =
+    cartItems?.length &&
+    cartItems.reduce((total, item) => total + (item.count || 1), 0);
+
   return (
     <nav className={styles.Navbar}>
-      <h1 style={{ cursor: 'pointer' }}>
+      <h1
+        style={{ cursor: 'pointer' }}
+        onClick={() => router.push(Resource.Routes.HOME)}
+      >
         <strong>A</strong>store
       </h1>
       <ul>
@@ -46,17 +51,12 @@ const Navbar = () => {
         <li>
           <Link href={Resource.Routes.PRODUCTS}>Shop</Link>
         </li>
-        <li>
-          <Link href={'/'}>Blog</Link>
-        </li>
-        <li onClick={context.moveAbout}>About Us</li>
-        <li onClick={context.moveContact}>Contact Us</li>
       </ul>
       <div className={styles.Icons}>
         {status === 'authenticated' ? (
           <div className={styles.DropdownContainer}>
             <AiOutlineUser
-              size={20}
+              size={23}
               color='grey'
               cursor={'pointer'}
               onClick={() => setShowDropdown(!showDropdown)}
@@ -86,7 +86,7 @@ const Navbar = () => {
             title='Login | Register'
             img={
               <IoIosLogIn
-                size={20}
+                size={23}
                 style={{ marginRight: '5px', fontWeight: 'normal' }}
               />
             }
@@ -94,9 +94,9 @@ const Navbar = () => {
           />
         )}
         <div className={styles.CartContainer}>
-          <span className={styles.CartNumber}>{cartItems?.length || 0}</span>
+          <span className={styles.CartNumber}>{itemCount || 0}</span>
           <BsCart
-            size={20}
+            size={23}
             color='grey'
             cursor={'pointer'}
             onClick={() => router.push(Resource.Routes.CART)}

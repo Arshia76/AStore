@@ -30,7 +30,11 @@ const NewArrivals = (props) => {
           );
         })}
       </div>
-      <Button className='View' title='View More' />
+      <Button
+        className='View'
+        title='View More'
+        onClick={() => router.push(Resource.Routes.PRODUCTS)}
+      />
     </div>
   );
 };

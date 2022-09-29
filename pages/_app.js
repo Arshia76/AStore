@@ -12,31 +12,28 @@ import { store } from '../store';
 import { Provider } from 'react-redux';
 import { SessionProvider } from 'next-auth/react';
 import { ToastContainer } from 'react-toastify';
-import RefState from '../context/RefContext';
 
 function MyApp({ Component, pageProps }) {
   const [queryClient] = useState(() => new QueryClient());
   return (
     <Provider store={store}>
-      <RefState>
-        <SessionProvider session={pageProps.session}>
-          <QueryClientProvider client={queryClient}>
-            <Component {...pageProps} />
-            <ToastContainer
-              position='top-right'
-              autoClose={5000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={true}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              style={{ fontSize: '14px' }}
-            />
-          </QueryClientProvider>
-        </SessionProvider>
-      </RefState>
+      <SessionProvider session={pageProps.session}>
+        <QueryClientProvider client={queryClient}>
+          <Component {...pageProps} />
+          <ToastContainer
+            position='top-right'
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={true}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            style={{ fontSize: '14px' }}
+          />
+        </QueryClientProvider>
+      </SessionProvider>
     </Provider>
   );
 }

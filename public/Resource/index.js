@@ -16,6 +16,8 @@ import SHIPPING from './Svg/shipping.svg';
 import MONEY_BACK from './Svg/money_back.svg';
 import SUPPORT from './Svg/support.svg';
 
+import LOADER from './Gif/Loader.gif';
+
 class Resource {
   static Images = {
     CAMERA,
@@ -31,6 +33,10 @@ class Resource {
     JEWELERY1,
     ABOUT,
     MARKER,
+  };
+
+  static Gif = {
+    LOADER,
   };
 
   static Svg = {

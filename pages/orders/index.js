@@ -7,12 +7,13 @@ import Button from '../../components/Shared/Button';
 import { useRouter } from 'next/router';
 import Resource from '../../public/Resource';
 import PrivateRoute from '../../components/Common/PrivateRoute';
+import Loader from '../../components/Common/Loader';
 
 const OrdersPage = () => {
   const { data: user } = useSession();
   const router = useRouter();
 
-  const { data } = useGetUserOrders(user && user.id);
+  const { data, isLoading } = useGetUserOrders(user && user.id);
 
   const headers = {
     id: 'id',
@@ -48,7 +49,11 @@ const OrdersPage = () => {
     <Layout>
       <div className={styles.Orders}>
         <h4>Orders</h4>
-        <Table className='UserOrders' headers={headers} data={tableData} />
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <Table className='UserOrders' headers={headers} data={tableData} />
+        )}
       </div>
     </Layout>
   );

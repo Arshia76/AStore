@@ -3,8 +3,10 @@ import Button from '../../../Shared/Button';
 import styles from './Hero.module.css';
 import Image from 'next/image';
 import Resource from '../../../../public/Resource';
+import { useRouter } from 'next/router';
 
 const Hero = () => {
+  const router = useRouter();
   const settings = {
     dots: true,
     infinite: true,
@@ -28,7 +30,11 @@ const Hero = () => {
         <div className={styles.Content}>
           <h2>WOMEN CLOTHES</h2>
           <p>Get the exclusive list of WOMEN Clothes</p>
-          <Button title='View' className='View' />
+          <Button
+            title='View'
+            className='View'
+            onClick={() => router.push(Resource.Routes.PRODUCTS)}
+          />
         </div>
       </div>
       <div className={styles.Product}>
@@ -43,7 +49,11 @@ const Hero = () => {
         <div className={styles.Content}>
           <h2>MEN CLOTHES</h2>
           <p>Get the best T-Shirts around the world with best quality</p>
-          <Button title='View' className='View' />
+          <Button
+            title='View'
+            className='View'
+            onClick={() => router.push(Resource.Routes.PRODUCTS)}
+          />
         </div>
       </div>
       <div className={styles.Product}>
@@ -60,7 +70,11 @@ const Hero = () => {
           <p>
             Looking for Jewelery? Dont worry we ve got the best offers for you
           </p>
-          <Button title='View' className='View' />
+          <Button
+            title='View'
+            className='View'
+            onClick={() => router.push(Resource.Routes.PRODUCTS)}
+          />
         </div>
       </div>
     </Slider>
