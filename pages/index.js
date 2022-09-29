@@ -5,6 +5,7 @@ import { getAllProducts } from '../lib/api/Product';
 import Resource from '../public/Resource';
 import styles from '../styles/page/Home.module.css';
 import Layout from '../components/Common/Layout';
+import About from '../components/Page/Home/About';
 
 export default function Home(props) {
   const { products } = props;
@@ -31,6 +32,7 @@ export default function Home(props) {
             serviceDescription='30 day money back guarantee'
           />
         </div>
+        <About />
       </div>
     </Layout>
   );
