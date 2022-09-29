@@ -29,7 +29,8 @@
 
 .Button.View,
 .Button.Checkout,
-.Button.View-White {
+.Button.View-White,
+.Button.ContactForm {
   position: relative;
   padding: 10px 65px;
   background-color: #bd744c;
@@ -41,6 +42,12 @@
   cursor: pointer;
   font-weight: 500;
   white-space: nowrap;
+}
+
+.Button.ContactForm {
+  width: 100px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 .Button.View-White {

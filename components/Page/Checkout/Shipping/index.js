@@ -226,7 +226,7 @@ const Shipping = () => {
           title={!isLoading && 'Place Order'}
           disabled={isLoading}
           img={
-            isLoading && <AiOutlineLoading3Quarters size={25} color='black' />
+            isLoading && <AiOutlineLoading3Quarters size={25} color='#fff' />
           }
           isLoader={true}
         />

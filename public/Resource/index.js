@@ -10,6 +10,7 @@ import WOMEN from './Images/women.jpg';
 import MEN from './Images/men.jpg';
 import JEWELERY1 from './Images/jewelery.jpg';
 import ABOUT from './Images/about.jpg';
+import MARKER from './Images/marker-icon.png';
 
 import SHIPPING from './Svg/shipping.svg';
 import MONEY_BACK from './Svg/money_back.svg';
@@ -29,6 +30,7 @@ class Resource {
     MEN,
     JEWELERY1,
     ABOUT,
+    MARKER,
   };
 
   static Svg = {

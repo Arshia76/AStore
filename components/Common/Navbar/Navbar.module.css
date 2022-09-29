@@ -30,6 +30,7 @@
   font-size: 16px;
   color: grey;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .Navbar ul li:hover {

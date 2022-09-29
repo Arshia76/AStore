@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import NewArrivals from '../components/Page/Home/NewArrivals';
 import Hero from '../components/Page/Home/Hero';
 import Service from '../components/Page/Home/Service';
@@ -6,6 +7,10 @@ import Resource from '../public/Resource';
 import styles from '../styles/page/Home.module.css';
 import Layout from '../components/Common/Layout';
 import About from '../components/Page/Home/About';
+import ContactForm from '../components/Page/Home/Contact/Form';
+const Map = dynamic(() => import('../components/Page/Home/Contact/Map'), {
+  ssr: false,
+});
 
 export default function Home(props) {
   const { products } = props;
@@ -15,6 +20,7 @@ export default function Home(props) {
       <div style={{ overflow: ' hidden' }}>
         <Hero />
         <NewArrivals products={products} />
+        <About />
         <div className={styles.Services}>
           <Service
             img={Resource.Svg.SHIPPING}
@@ -32,7 +38,10 @@ export default function Home(props) {
             serviceDescription='30 day money back guarantee'
           />
         </div>
-        <About />
+        <div className={styles.ContactUs} id='Contact'>
+          <Map />
+          <ContactForm />
+        </div>
       </div>
     </Layout>
   );

@@ -4,7 +4,7 @@ import Resource from '../../../../public/Resource';
 
 const About = () => {
   return (
-    <div className={styles.About}>
+    <div className={styles.About} id='About'>
       <div className={styles.Image}>
         <Image
           src={Resource.Images.ABOUT}

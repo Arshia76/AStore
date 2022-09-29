@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import styles from './Navbar.module.css';
 import Link from 'next/link';
 import { BsCart } from 'react-icons/bs';
@@ -9,8 +10,10 @@ import { useSession } from 'next-auth/react';
 import Button from '../../Shared/Button';
 import { IoIosLogIn } from 'react-icons/io';
 import { signOut } from 'next-auth/react';
+import { RefContext } from '../../../context/RefContext';
 
 const Navbar = () => {
+  const context = useContext(RefContext);
   const router = useRouter();
   const cartItems = useSelector((state) => state.cart.cartItems);
   const { status } = useSession();
@@ -29,12 +32,8 @@ const Navbar = () => {
         <li>
           <Link href={'/'}>Blog</Link>
         </li>
-        <li>
-          <Link href={'/'}>About Us</Link>
-        </li>
-        <li>
-          <Link href={'/'}>Contact Us</Link>
-        </li>
+        <li onClick={context.moveAbout}>About Us</li>
+        <li onClick={context.moveContact}>Contact Us</li>
       </ul>
       <div className={styles.Icons}>
         {status === 'authenticated' ? (
