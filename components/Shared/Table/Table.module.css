@@ -1,0 +1,32 @@
+.Table.UserOrders {
+  border-collapse: collapse;
+  width: 90%;
+  font-size: 20px;
+  table-layout: fixed;
+  margin: auto;
+}
+
+.Table.UserOrders th,
+.Table.UserOrders td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.Table.UserOrders tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.Table.UserOrders th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #bd744c;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.Table.UserOrders td {
+  text-align: center;
+  vertical-align: middle;
+}

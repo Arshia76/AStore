@@ -4,7 +4,7 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 import { comparePassword } from '../../../Backend/utils/Auth';
 import ConnectDB from '../../../Backend/lib/ConnectDB';
 
-const authOptions = {
+export const authOptions = {
   session: {
     strategy: 'jwt',
   },
@@ -14,7 +14,6 @@ const authOptions = {
       if (account) {
         token.id = user.id;
         token.username = user.username;
-        console.log(token);
       }
       return token;
     },
@@ -22,7 +21,6 @@ const authOptions = {
       // Send properties to the client, like an access_token from a provider.
       session.id = token.id;
       session.username = token.username;
-      console.log(session);
       return session;
     },
   },

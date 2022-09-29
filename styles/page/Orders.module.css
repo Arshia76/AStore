@@ -1,0 +1,13 @@
+.Orders {
+  min-height: calc(100ch - 54px);
+  padding: 25px;
+}
+
+.Orders h4 {
+  font-size: 35px;
+  font-weight: 700;
+
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10px;
+}

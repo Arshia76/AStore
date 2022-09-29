@@ -28,6 +28,9 @@ export const OrderSchema = yup.object({
       productName: yup.string().required('Please Enter ProductName'),
       productPrice: yup.string().required('Please Enter ProductPrice'),
       productCount: yup.string().required('Please Enter ProductCount'),
+      productImage: yup.string().required('Please Enter ProductImage'),
+      productCategory: yup.string().required('Please Enter ProductCategory'),
+      productId: yup.string().required('Please Enter ProductId'),
     })
   ),
 });

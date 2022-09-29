@@ -33,7 +33,16 @@ const OrderModel = new mongoose.Schema(
     },
     orders: [
       {
+        productId: {
+          type: String,
+        },
         productName: {
+          type: String,
+        },
+        productCategory: {
+          type: String,
+        },
+        productImage: {
           type: String,
         },
         productPrice: {

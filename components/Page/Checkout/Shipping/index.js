@@ -51,6 +51,7 @@ const Shipping = () => {
   );
 
   const onSubmit = (values) => {
+    console.log('called');
     const data = {
       user: {
         _id: user.id,
@@ -65,9 +66,12 @@ const Shipping = () => {
         location: values.location,
       },
       orders: cartItems.map((item) => ({
+        productId: item.id.toString(),
         productName: item.title,
+        productCategory: item.category,
+        productImage: item.image,
         productPrice: item.price.toString(),
-        productCount: item.count.toString(),
+        productCount: item.count ? item.count.toString() : '1',
       })),
     };
     createOrder(data);

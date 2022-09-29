@@ -41,6 +41,7 @@ class Resource {
     CART: '/cart',
     AUTH: '/auth',
     CHECKOUT: '/checkout',
+    ORDERS: '/orders',
   };
 }
 
