@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import Resource from '../../public/Resource';
 import PrivateRoute from '../../components/Common/PrivateRoute';
 import Loader from '../../components/Common/Loader';
+import Header from '../../components/Common/Header';
 
 const OrdersPage = () => {
   const { data: user } = useSession();
@@ -47,6 +48,10 @@ const OrdersPage = () => {
 
   return (
     <Layout>
+      <Header
+        title='Orders'
+        description='Astore an online eccomerce located in iran created with nextjs'
+      />
       <div className={styles.Orders}>
         <h4>Orders</h4>
         {isLoading ? (

@@ -5,15 +5,6 @@ import Image from 'next/image';
 
 const Filter = (props) => {
   const [indexes, setIndexes] = useState([]);
-  const onCheckChangeCategory = (value, event) => {
-    if (value) {
-      props.setCategoryFilter((data) => [...data, event.target.textContent]);
-    } else {
-      props.setCategoryFilter((data) =>
-        data.filter((d) => d !== event.target.textContent)
-      );
-    }
-  };
 
   const handleCategory = (index, c) => {
     if (indexes.includes(index)) {

@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import Header from '../components/Common/Header';
 import NewArrivals from '../components/Page/Home/NewArrivals';
 import Hero from '../components/Page/Home/Hero';
 import Service from '../components/Page/Home/Service';
@@ -17,6 +18,10 @@ export default function Home(props) {
 
   return (
     <Layout>
+      <Header
+        title='Home'
+        description='Astore an online eccomerce located in iran created with nextjs'
+      />
       <div style={{ overflow: ' hidden' }}>
         <Hero />
         <NewArrivals products={products} />

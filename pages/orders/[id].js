@@ -1,21 +1,21 @@
 import OrderItems from '../../components/Page/Orders/OrderItems';
-import { useGetUserOrders } from '../../lib/query/Order';
-import { useSession } from 'next-auth/react';
+import { useGetOrder } from '../../lib/query/Order';
 import PrivateRoute from '../../components/Common/PrivateRoute';
 import { useRouter } from 'next/router';
+import Header from '../../components/Common/Header';
 
 const OrderPage = () => {
-  const { data: user } = useSession();
   const router = useRouter();
 
-  const { data } = useGetUserOrders(user && user.id);
+  const { data } = useGetOrder(router.query.id.toString());
   console.log('dataaaa', data);
-  const order =
-    data &&
-    data.find((item) => item._id.toString() === router.query.id.toString());
 
   return (
     <div>
+      <Header
+        title={data._id}
+        description='Astore an online eccomerce located in iran created with nextjs'
+      />
       <OrderItems order={order} />
     </div>
   );

@@ -7,6 +7,7 @@ import Button from '../../components/Shared/Button';
 import Layout from '../../components/Common/Layout';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from '../../store/features/cartSlice';
+import Header from '../../components/Common/Header';
 
 const ProductPage = (props) => {
   const { product, products } = props;
@@ -15,6 +16,10 @@ const ProductPage = (props) => {
 
   return (
     <Layout>
+      <Header
+        title={product.title}
+        description='Astore an online eccomerce located in iran created with nextjs'
+      />
       <div className={styles.ProductPage}>
         <div className={styles.Product}>
           <div className={styles.Image}>

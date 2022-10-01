@@ -4,6 +4,7 @@ import Products from '../../components/Page/Shop/Products';
 import { getAllProducts, getCategories } from '../../lib/api/Product';
 import styles from '../../styles/page/Shop.module.css';
 import Layout from '../../components/Common/Layout';
+import Header from '../../components/Common/Header';
 
 const ProductsPage = (props) => {
   const { products } = props;
@@ -24,6 +25,10 @@ const ProductsPage = (props) => {
 
   return (
     <Layout>
+      <Header
+        title='Products'
+        description='Astore an online eccomerce located in iran created with nextjs'
+      />
       <div className={styles.Shop}>
         <Filter
           categories={props.categories}
