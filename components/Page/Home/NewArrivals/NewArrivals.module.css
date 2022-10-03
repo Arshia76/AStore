@@ -32,3 +32,13 @@
   justify-items: center;
   margin-bottom: 35px;
 }
+
+@media (max-width: 768px) {
+  .NewArrivals h4 {
+    font-size: 20px;
+  }
+
+  .NewArrivals p {
+    font-size: 18px;
+  }
+}

@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .ProductPage .Product {
@@ -90,4 +91,40 @@
   margin-bottom: 20px;
   border-bottom: 3px solid #76757a;
   padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .ProductPage .Product {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .ProductPage .Image {
+    margin-bottom: 18px;
+  }
+
+  .ProductPage .Content h5 {
+    font-size: 18px;
+  }
+
+  .ProductPage .Content .Price {
+    font-size: 20px;
+  }
+
+  .Product .Content h3 {
+    font-size: 22px;
+  }
+
+  .Product .Content p {
+    font-size: 16px;
+  }
+
+  .Product .Content h4 {
+    font-size: 14px;
+  }
+
+  .ProductPage h6 {
+    font-size: 20px;
+    border-width: 1px;
+  }
 }

@@ -100,3 +100,18 @@
 .Dropdown span:first-child {
   border-bottom: 1px solid #ddd;
 }
+
+@media (max-width: 768px) {
+  .Navbar h1 {
+    font-size: 23px;
+  }
+
+  .Navbar ul li {
+    font-size: 18px;
+    padding: 5px 8px;
+  }
+
+  .Navbar .Icons div {
+    margin-left: 10px;
+  }
+}

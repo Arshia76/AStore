@@ -13,10 +13,10 @@ const OrderPage = () => {
   return (
     <div>
       <Header
-        title={data._id}
+        title={data && data.productId}
         description='Astore an online eccomerce located in iran created with nextjs'
       />
-      <OrderItems order={order} />
+      <OrderItems order={data} />
     </div>
   );
 };

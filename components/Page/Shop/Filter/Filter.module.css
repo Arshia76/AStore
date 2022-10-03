@@ -10,6 +10,7 @@
   align-items: flex-start;
   width: 100%;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .Filter .Category {
@@ -26,4 +27,23 @@
   font-size: 20px;
   font-weight: 500;
   margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .Filter {
+    padding: 15px;
+  }
+
+  .Filter .Category {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Filter .Category {
+    padding: 5px;
+  }
+
+  .Filter h4 {
+    font-size: 16px;
+  }
 }

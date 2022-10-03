@@ -4,6 +4,8 @@
   font-size: 20px;
   table-layout: fixed;
   margin: auto;
+  overflow-x: auto;
+  min-width: 800px;
 }
 
 .Table.UserOrders th,
@@ -29,4 +31,10 @@
 .Table.UserOrders td {
   text-align: center;
   vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .Table.UserOrders {
+    font-size: 16px;
+  }
 }

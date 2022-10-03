@@ -44,7 +44,7 @@ const Filter = (props) => {
                 }
                 alt={c}
                 width={50}
-                height={80}
+                height={60}
               />
               <h4>{c}</h4>
             </div>

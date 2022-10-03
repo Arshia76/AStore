@@ -3,4 +3,13 @@
   height: calc(100vh - 54px);
   max-height: calc(100vh - 54px);
   padding: 50px;
+  min-width: 100%;
+  overflow: auto;
+}
+
+@media (max-width: 768px) {
+  .Cart {
+    flex-direction: column;
+    padding: 15px;
+  }
 }

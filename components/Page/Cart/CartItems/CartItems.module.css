@@ -5,6 +5,7 @@
   border-radius: 15px 0 0 15px;
   flex: 2;
   box-shadow: 0 0 20px -17px rgba(0, 0, 0, 0.393);
+  overflow: auto;
 }
 
 .CartItems .CartHeader {
@@ -13,6 +14,7 @@
   justify-content: space-between;
   border-bottom: 2px solid #fafafa;
   padding-bottom: 50px;
+  min-width: 600px;
 }
 
 .CartHeader h4 {
@@ -25,8 +27,9 @@
 }
 
 .CartItemList {
-  overflow-y: auto;
+  overflow: auto;
   margin-top: 20px;
+  min-width: 600px;
 }
 
 .CartItems h5 {

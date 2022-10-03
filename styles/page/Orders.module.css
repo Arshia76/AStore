@@ -1,13 +1,19 @@
 .Orders {
   min-height: calc(100ch - 54px);
   padding: 25px;
+  overflow: auto;
 }
 
 .Orders h4 {
   font-size: 35px;
   font-weight: 700;
-
   width: 90%;
   margin: auto;
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .Orders h4 {
+    font-size: 22px;
+  }
 }

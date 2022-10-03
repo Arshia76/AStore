@@ -1,6 +1,12 @@
 .ContactForm {
   display: flex;
   flex-direction: column;
-  flex: 1;
   padding: 0 60px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .ContactForm {
+    padding: 15px 0;
+  }
 }

@@ -52,3 +52,18 @@
 .CartItem .Count :last-child {
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .CartItem .Count span {
+    width: 25px;
+    height: 25px;
+  }
+
+  .CartItem {
+    padding: 0;
+  }
+
+  .CartItem span {
+    width: 150px;
+  }
+}

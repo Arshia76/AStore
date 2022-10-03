@@ -14,3 +14,10 @@
   row-gap: 35px;
   column-gap: 35px;
 }
+
+@media (max-width: 768px) {
+  .ProductContiner {
+    width: 80%;
+    margin: auto;
+  }
+}

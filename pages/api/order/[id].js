@@ -1,4 +1,4 @@
-import { getUserOrders } from '../../../Backend/controllers/order';
+import { getOrder } from '../../../Backend/controllers/order';
 import connectDB from '../../../Backend/lib/ConnectDB';
 import { validate } from '../../../Backend/middlewares/Validator';
 import { OrderSchema } from '../../../Backend/validators/Order';

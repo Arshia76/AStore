@@ -7,4 +7,12 @@
   margin-bottom: 35px;
   padding: 0 15px;
   column-gap: 20px;
+  row-gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .Products {
+    width: 80%;
+    margin: auto;
+  }
 }

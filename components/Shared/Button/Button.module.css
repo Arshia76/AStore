@@ -155,3 +155,10 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 768px) {
+  .Button.Subscribe {
+    width: 150px;
+    margin-top: 15px;
+  }
+}
