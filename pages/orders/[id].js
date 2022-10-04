@@ -3,6 +3,7 @@ import { useGetOrder } from '../../lib/query/Order';
 import PrivateRoute from '../../components/Common/PrivateRoute';
 import { useRouter } from 'next/router';
 import Header from '../../components/Common/Header';
+import Layout from '../../components/Common/Layout';
 
 const OrderPage = () => {
   const router = useRouter();
@@ -11,13 +12,13 @@ const OrderPage = () => {
   console.log('dataaaa', data);
 
   return (
-    <div>
+    <Layout>
       <Header
         title={data && data.productId}
         description='Astore an online eccomerce located in iran created with nextjs'
       />
       <OrderItems order={data} />
-    </div>
+    </Layout>
   );
 };
 

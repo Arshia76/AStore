@@ -13,7 +13,7 @@
 
 .ContactUs {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   justify-items: start;
   width: 90%;
   margin: 35px auto;

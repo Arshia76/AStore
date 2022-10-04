@@ -12,7 +12,7 @@ const ContactForm = () => {
   const email =
     '/^(([^<>()[]\\.,;:s@"]+(.[^<>()[]\\.,;:s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/';
   const validationSchema = yup.object({
-    fullName: yup.string().required('fullName is required'),
+    fullName: yup.string().required('FullName is required'),
 
     email: yup
       .string()
@@ -46,7 +46,7 @@ const ContactForm = () => {
           errorClassName='ContactForm'
           mainContainerClassName='ContactForm'
           name='fullName'
-          placeholder='fullName'
+          placeholder='FullName'
           value={formik.values.fullName}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
