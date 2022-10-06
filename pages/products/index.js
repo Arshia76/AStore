@@ -27,7 +27,7 @@ const ProductsPage = (props) => {
     <Layout>
       <Header
         title='Products'
-        description='Astore an online eccomerce located in iran created with nextjs'
+        description='arshi-store an online eccomerce located in iran created with nextjs'
       />
       <div className={styles.Shop}>
         <Filter

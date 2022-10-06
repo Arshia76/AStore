@@ -21,7 +21,7 @@ const AuthPage = () => {
       <Layout>
         <Header
           title='Auth'
-          description='Astore an online eccomerce located in iran created with nextjs'
+          description='arshi-store an online eccomerce located in iran created with nextjs'
         />
         <Auth />
       </Layout>

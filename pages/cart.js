@@ -9,7 +9,7 @@ const CartPage = () => {
     <Layout>
       <Header
         title='Cart'
-        description='Astore an online eccomerce located in iran created with nextjs'
+        description='arshi-store an online eccomerce located in iran created with nextjs'
       />
       <div className={styles.Cart}>
         <CartItems />

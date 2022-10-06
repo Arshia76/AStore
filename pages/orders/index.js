@@ -50,7 +50,7 @@ const OrdersPage = () => {
     <Layout>
       <Header
         title='Orders'
-        description='Astore an online eccomerce located in iran created with nextjs'
+        description='arshi-store an online eccomerce located in iran created with nextjs'
       />
       <div className={styles.Orders}>
         <h4>Orders</h4>

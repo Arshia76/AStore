@@ -9,7 +9,7 @@ const CheckoutPage = () => {
     <Layout>
       <Header
         title='Checkout'
-        description='Astore an online eccomerce located in iran created with nextjs'
+        description='arshi-store an online eccomerce located in iran created with nextjs'
       />
       <div className={styles.Checkout}>
         <Shipping />

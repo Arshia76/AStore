@@ -20,7 +20,7 @@ export default function Home(props) {
     <Layout>
       <Header
         title='Home'
-        description='Astore an online eccomerce located in iran created with nextjs'
+        description='arshi-store an online eccomerce located in iran created with nextjs'
       />
       <div style={{ overflow: ' hidden' }}>
         <Hero />

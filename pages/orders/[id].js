@@ -15,7 +15,7 @@ const OrderPage = () => {
     <Layout>
       <Header
         title={data && data.productId}
-        description='Astore an online eccomerce located in iran created with nextjs'
+        description='arshi-store an online eccomerce located in iran created with nextjs'
       />
       <OrderItems order={data} />
     </Layout>

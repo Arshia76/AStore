@@ -18,7 +18,7 @@ const ProductPage = (props) => {
     <Layout>
       <Header
         title={product.title}
-        description='Astore an online eccomerce located in iran created with nextjs'
+        description='arshi-store an online eccomerce located in iran created with nextjs'
       />
       <div className={styles.ProductPage}>
         <div className={styles.Product}>
