@@ -13,6 +13,8 @@ const Header = (props) => {
       <meta property='og:title' content={props.title} />
       <meta property='og:description' content={props.description} />
       <meta name='keywords' content='OnlineStore,Eccomerce,Nextjs' />
+      <meta property='og:url' content='https://arshi-store.vercel.app' />
+      <meta name='author' content='Arshia Nazarlotfi |  ارشیا نظرلطفی' />
     </Head>
   );
 };
