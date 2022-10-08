@@ -7,12 +7,13 @@
 .Auth {
   border-radius: 25px;
   box-shadow: 0 0 30px -25px rgba(0, 0, 0, 0.484);
-  padding: 50px;
-  width: 30%;
+  padding: 80px;
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid #ddd;
+  margin: auto;
 }
 
 .Auth h5 {
@@ -32,4 +33,11 @@
   font-weight: 600;
   color: #f43219;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .Auth {
+    width: 90%;
+    padding: 30px;
+  }
 }

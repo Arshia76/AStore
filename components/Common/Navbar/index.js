@@ -10,9 +10,11 @@ import { useSession } from 'next-auth/react';
 import Button from '../../Shared/Button';
 import { IoIosLogIn } from 'react-icons/io';
 import { signOut } from 'next-auth/react';
+import useWindowSize from '../../../hooks/useWindowSize';
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const { width } = useWindowSize();
   const router = useRouter();
   const cartItems = useSelector((state) => state.cart.cartItems);
   const { status } = useSession();
@@ -83,11 +85,14 @@ const Navbar = () => {
         ) : (
           <Button
             className={'SignUp'}
-            title='Login | Register'
+            title={width > 700 ? 'Login | Register' : ''}
             img={
               <IoIosLogIn
                 size={23}
-                style={{ marginRight: '5px', fontWeight: 'normal' }}
+                style={{
+                  marginRight: width > 700 ? '5px' : '0',
+                  fontWeight: 'normal',
+                }}
               />
             }
             onClick={() => router.push(Resource.Routes.AUTH)}
